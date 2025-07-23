@@ -9,7 +9,9 @@ model =YOLO("yolo11n.pt")
 #detecting bus
 # results=model(image,save=True,conf=0.25,classes=[5])
 #detecting both person and  bus
-results=model(image,save=True,conf=0.25,classes=[0,5])
+# results=model(image,save=True,conf=0.25,classes=[0,5])
+#adding maximum detection parametre
+results=model(image,save=True,conf=0.88,classes=[0],max_det=1)
 # cv2.imshow("Image:",image)
 # cv2.waitKey(0)
 cv2.imshow()
